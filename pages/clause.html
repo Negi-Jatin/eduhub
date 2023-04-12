@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>ECOURSES - Online Courses HTML Template</title>
+    <title>EduHub-Online Learing Platform</title>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -54,14 +54,14 @@
                    
                     <div class="collapse navbar-collapse justify-content-around" style="margin-left: 100px;" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="index.html#about" class="nav-item nav-link">About</a>
-                            <a href="index.html#course" class="nav-item nav-link">Courses</a>
+                            <a href="../index.html" class="nav-item nav-link">Home</a>
+                            <a href="../index.html#about" class="nav-item nav-link">About</a>
+                            <a href="../index.html#course" class="nav-item nav-link">Courses</a>
                           
-                            <a href="index.html#blog" class="nav-item nav-link">Blogs</a>
-                            <a href="index.html#contact" class="nav-item nav-link">Contact</a>
+                            <a href="../index.html#blog" class="nav-item nav-link">Blogs</a>
+                            <a href="../index.html#contact" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="index.html#join">Join Now</a>
+                        <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="../index.html#join">Join Now</a>
                     </div>
                 </nav>
             </div>     
@@ -93,7 +93,7 @@
                 <div class="col-lg-8">
                     <div class="mb-5">
                         <h6 class="text-primary mb-3">Apr 11, 2023</h6>
-                        <h1 class="mb-5"> Clause : Where, OrderBy, Update, Drop, Truncate</h1>
+                        <h1 class="mb-5"> Clause : Where, OrderBy, Group Function and Group by, Having Clause</h1>
                         <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
                         <h5 class="mb-4">SQL Where Clause</h5>
                         <p> 
@@ -130,35 +130,49 @@
                         </div>
                      
                       <br>
-                      
-                      <h5 class="mb-4">SQL UPDATE TABLE Statement</h5>
-                      <p>The UPDATE statement is used to modify the existing records in a table.</p>
-                      <div class="syntax">
-                        <p>UPDATE table_name <br>
-                            SET column1 = value1, column2 = value2, ... <br>
-                            WHERE condition;</p>
-                      </div>
-                      <br>
-                      
-                      <h5 class="mb-4">SQL DROP TABLE Statement</h5>
-                      <p>DROP is used to delete a whole database or just a table.
-                        <br>
-                        In this article, we will be learning about the DROP statement which destroys objects like an existing database, <br> table, index, or view. A DROP statement in SQL removes a component from a relational database management system (RDBMS). </p>
-                      <div class="syntax">
-                        <p>DROP object object_name;</p>
-                      </div>
-                      <br>
-                      <h5 class="mb-4">SQL TRUNCATE TABLE Statement</h5>
-                      <p>The major definition between TRUNCATE and DROP is that truncate is used to delete the data inside the table not the whole table.
-                        <br>
-                        TRUNCATE statement is a Data Definition Language (DDL) operation that is used to mark the extent of a table for deallocation (empty for reuse). The result of this operation quickly removes all data from a table, typically bypassing several integrity-enforcing mechanisms. It was officially introduced in the SQL:2008 standard. The TRUNCATE TABLE mytable statement is logically (though not physically) equivalent to the DELETE FROM mytable statement (without a WHERE clause).</p>
-                        <div class="syntax">
-                            <p>TRUNCATE TABLE  table_name;
-                                <br>
-                                table_name: Name of the table to be truncated.
-                                <br>
-                                DATABASE name – student_data</p>
-                        </div>
+                      <h5 class="mb-4">SQL Group Function</h5>
+                        <p> 
+                            In database management an aggregate function is a function where the values of multiple rows are grouped together as input on certain criteria to form a single value of more significant meaning.
+                            <br><br>
+                            Examples of Aggregate Function
+                       <div class="syntax">
+                        <p>1. Count() <br>
+                            2. Sum() <br>
+                            3. Avg() <br>
+                            4. Min() <br>
+                            5. Max() <br>
+                        </p>
+                       </div>
+                       <br>
+                       <h5 class="mb-4">SQL Group By Clause</h5>
+                        <p> 
+                            The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+                            <br>
+                            The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns. <br>
+                            Syntax : 
+                       <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE condition <br>
+                            GROUP BY column_name(s) <br>
+                            ORDER BY column_name(s);
+                        </p>
+                       </div>
+                       <br>
+                       <h5 class="mb-4">SQL Having Clause</h5>
+                        <p> 
+                            The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions. <br>
+                            Syntax :
+                       <div class="syntax">
+                        <p>SELECT column_name(s)
+                            FROM table_name
+                            WHERE condition
+                            GROUP BY column_name(s)
+                            HAVING condition
+                            ORDER BY column_name(s);
+                        </p>
+                       </div>
+                       <br>
                     </div> 
 
                   
@@ -193,28 +207,34 @@
                         <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Topic List</h3>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="../dbms.html" class="text-decoration-none h6 m-0"> MySQL : Types of Commands in SQL</a>
+                                <a href="../dbms.html" class="text-decoration-none h6 m-0"> MySQL : Types of Commands</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="ddl.html" class="text-decoration-none h6 m-0"> MySQL : Creating Tables, Inserting Row, Selecting Rows, or Viewing Data of the Table</a>
+                                <a href="ddl.html" class="text-decoration-none h6 m-0"> MySQL : Creating Tables, Inserting Row, Selecting Rows, Deleting Table</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="clause.html" class="text-decoration-none h6 m-0">Clause : Where, OrderBy, Update, Drop, Truncate</a>
+                                <a href="essential.html" class="text-decoration-none h6 m-0">MySQL : Update, Delete, Truncate, Alter Command</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="group.html" class="text-decoration-none h6 m-0">Group Function, Operators, Treating NULL Values, Alter Command</a>
+                                <a href="operator.html" class="text-decoration-none h6 m-0">MySQL : Special Operators and Treating NULL Values</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="clause.html" class="text-decoration-none h6 m-0">Clause : Where, OrderBy, Group Function and Group by, Having Clause</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 <a href="constraint.html" class="text-decoration-none h6 m-0">Constraints: Column & Table Level, Primary Key, Foreign Key</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="constraint(2).html" class="text-decoration-none h6 m-0">Unique key, Not NULL, Check, Default value </a>
+                                <a href="constraint(2).html" class="text-decoration-none h6 m-0">Constraints : Unique key, Not NULL, Check, Default value</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="Scalar.html" class="text-decoration-none h6 m-0">Distinct Keyword and Scalar Functions</a>
+                                <a href="Scalar.html" class="text-decoration-none h6 m-0">Distinct keywords, Scalar Functions : Date, Maths and String Functions</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                <a href="view.html" class="text-decoration-none h6 m-0">Views: Creating Read Only View, Updatable Views, Renaming Column, Destroying Views</a>
+                                <a href="join.html" class="text-decoration-none h6 m-0">Joins : Equi, Inner, Cross, Left, Right, Full Outer</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="view.html" class="text-decoration-none h6 m-0">Views: Creating View, Updating View, Deleting View</a>
                                 <span class="badge badge-primary badge-pill">98</span>
 
                             </li>
@@ -225,7 +245,13 @@
                                 <a href="pro.html" class="text-decoration-none h6 m-0">PL/Sql : Procedure and Functions</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="ifloop.html" class="text-decoration-none h6 m-0">PL/Sql : Decision and Iterative Control Structure</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 <a href="cursor.html" class="text-decoration-none h6 m-0">PL/Sql : Cursor Management</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="pack.html" class="text-decoration-none h6 m-0">PL/Sql : Packages</a>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 <a href="Exception.html" class="text-decoration-none h6 m-0">PL/Sql : Exception Handling</a>

@@ -94,65 +94,56 @@
                     <div class="mb-5">
                        
                         <h6 class="text-primary mb-3">Apr 11, 2023</h6>
-                        <h1 class="mb-5">PL/SQL : Triggers</h1>
+                        <h1 class="mb-5">PL/SQL : Packages</h1>
                         <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
-                        <h5 class="mb-4">What is a Trigger?</h5>
+                        <h5 class="mb-4">What is a Package?</h5>
                         <p> 
-                            Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −
+                            Packages are schema objects that groups logically related PL/SQL types, variables, and subprograms.
                             <br>
-                            1. A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)
-                            <br>
-                            2. A database definition (DDL) statement (CREATE, ALTER, or DROP).
-                            br
-                            3. A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).<br>
-                            <br>
-                            Syntax for Creating Trigger :
+                            A package will have two mandatory parts −
+                            <br><br>
+                            1. Package specification <br>
+                            2. Package body or definition 
                         </p>
+                        <h5 class="mb-4">Package Specification</h5>
+                        <p>The specification is the interface to the package. It just DECLARES the types, variables, constants, exceptions, cursors, and subprograms that can be referenced from outside the package. In other words, it contains all information about the content of the package, but excludes the code for the subprograms. <br>
+                        Example for Creating Package Specification : </p>
                       <div class="syntax">
-                        <p>CREATE [OR REPLACE ] TRIGGER trigger_name  <br>
-                            {BEFORE | AFTER | INSTEAD OF }  <br>
-                            {INSERT [OR] | UPDATE [OR] | DELETE} <br>  
-                            [OF col_name]  <br>
-                            ON table_name  <br>
-                            [REFERENCING OLD AS o NEW AS n]  <br>
-                            [FOR EACH ROW]  <br>
-                            WHEN (condition)   <br>
-                            DECLARE <br>
-                               Declaration-statements <br>
-                            BEGIN  <br>
-                               Executable-statements <br>
-                            EXCEPTION <br>
-                               Exception-handling-statements <br>
-                            END; 
+                        <p>CREATE PACKAGE cust_sal AS  <br>
+                            PROCEDURE find_sal(c_id customers.id%type);  <br>
+                         END cust_sal; <br>
+                         /
                         </p>
                       </div>
                       <br>
-                     
-                     
-                    <p>1. CREATE [OR REPLACE] TRIGGER trigger_name − Creates or replaces an existing trigger with the trigger_name.
-                        <br><br>
-                        2. {BEFORE | AFTER | INSTEAD OF} − This specifies when the trigger will be executed. The INSTEAD OF clause is used for creating trigger on a view. <br>
+                      <h5 class="mb-4">Package Body</h5>
+                      <p>The package body has the codes for various methods declared in the package specification and other private declarations, which are hidden from the code outside the package. <br>
+                      Example for Creating Package Body : </p>
+                    <div class="syntax">
+                      <p>CREATE OR REPLACE PACKAGE BODY cust_sal AS  
                         <br>
-                        3. {INSERT [OR] | UPDATE [OR] | DELETE} − This specifies the DML operation.
-                        <br><br>
-                        4. [OF col_name] − This specifies the column name that will be updated.
-                        <br><br>
-                        5. [ON table_name] − This specifies the name of the table associated with the trigger.
-                        <br><br>
-                        6. [REFERENCING OLD AS o NEW AS n] − This allows you to refer new and old values for various DML statements, such as INSERT, UPDATE, and DELETE.
-                        <br><br>
-
-                        7. [FOR EACH ROW] − This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected. Otherwise the trigger will execute just once when the SQL statement is executed, which is called a table level trigger.
-                        <br><br>
-                        8. WHEN (condition) − This provides a condition for rows for which the trigger would fire. This clause is valid only for row-level triggers.<br>
-                    </p>
+                        PROCEDURE find_sal(c_id customers.id%TYPE) IS <br>
+                        c_sal customers.salary%TYPE; <br>
+                        BEGIN <br>
+                           SELECT salary INTO c_sal <br>
+                           FROM customers <br>
+                           WHERE id = c_id; <br>
+                           dbms_output.put_line('Salary: '|| c_sal); <br>
+                        END find_sal; <br>
+                     END cust_sal; <br>
+                     / <br>
+                       
+                      </p>
+                    </div>
+                     
+                  
                     
                     <br>
                     
                     
                     
                   </div> 
-
+                  <iframe width="725" height="375" src="https://www.youtube.com/embed/1ytjx6VpsxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 
                 </div>
 

@@ -94,68 +94,47 @@
                     <div class="mb-5">
                        
                         <h6 class="text-primary mb-3">Apr 11, 2023</h6>
-                        <h1 class="mb-5">PL/SQL : Triggers</h1>
+                        <h1 class="mb-5">PL/SQL : Decision and Iterative Control Structure</h1>
                         <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
-                        <h5 class="mb-4">What is a Trigger?</h5>
+                        <h5 class="mb-4">Decision Control Structure</h5>
                         <p> 
-                            Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −
+                            PL/SQL Consist following keywords for Decision Control Structure : <br><br>
+                            1. if-then Statement : <br>
+                            The IF statement associates a condition with a sequence of statements enclosed by the keywords THEN and END IF. If the condition is true, the statements get executed and if the condition is false or NULL then the IF statement does nothing. <br>
                             <br>
-                            1. A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)
-                            <br>
-                            2. A database definition (DDL) statement (CREATE, ALTER, or DROP).
-                            br
-                            3. A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).<br>
-                            <br>
-                            Syntax for Creating Trigger :
+                            2. if-then-else Statement : <br>
+                            IF statement adds the keyword ELSE followed by an alternative sequence of statement. If the condition is false or NULL, then only the alternative sequence of statements get executed. It ensures that either of the sequence of statements is executed. <br><br>
+                            3. if-then-elsif Statement : <br>
+                            It allows you to choose between several alternatives. <br><br>
+                            4. Nested if-then-else Statement : <br>
+                            You can use one IF-THEN or IF-THEN-ELSIF statement inside another IF-THEN or IF-THEN-ELSIF statement(s).
                         </p>
-                      <div class="syntax">
-                        <p>CREATE [OR REPLACE ] TRIGGER trigger_name  <br>
-                            {BEFORE | AFTER | INSTEAD OF }  <br>
-                            {INSERT [OR] | UPDATE [OR] | DELETE} <br>  
-                            [OF col_name]  <br>
-                            ON table_name  <br>
-                            [REFERENCING OLD AS o NEW AS n]  <br>
-                            [FOR EACH ROW]  <br>
-                            WHEN (condition)   <br>
-                            DECLARE <br>
-                               Declaration-statements <br>
-                            BEGIN  <br>
-                               Executable-statements <br>
-                            EXCEPTION <br>
-                               Exception-handling-statements <br>
-                            END; 
+                        <h5 class="mb-4">Iterative Control Structure</h5>
+                        <p>
+                            PL/SQL Consist following keywords for Iterative Control Structure : <br><br>
+                            1. Simple Loop : <br>
+                            In this loop structure, sequence of statements is enclosed between the LOOP and the END LOOP statements. At each iteration, the sequence of statements is executed and then control resumes at the top of the loop. <br><br>
+                            2. While Loop : <br>
+                            Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body. <br><br>
+                            3. For Loop : <br>
+                            Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable. <br><br>
+                            4. Nested Loop : <br>
+                            You can use one or more loop inside any another basic loop, while, or for loop.
                         </p>
-                      </div>
-                      <br>
                      
-                     
-                    <p>1. CREATE [OR REPLACE] TRIGGER trigger_name − Creates or replaces an existing trigger with the trigger_name.
-                        <br><br>
-                        2. {BEFORE | AFTER | INSTEAD OF} − This specifies when the trigger will be executed. The INSTEAD OF clause is used for creating trigger on a view. <br>
-                        <br>
-                        3. {INSERT [OR] | UPDATE [OR] | DELETE} − This specifies the DML operation.
-                        <br><br>
-                        4. [OF col_name] − This specifies the column name that will be updated.
-                        <br><br>
-                        5. [ON table_name] − This specifies the name of the table associated with the trigger.
-                        <br><br>
-                        6. [REFERENCING OLD AS o NEW AS n] − This allows you to refer new and old values for various DML statements, such as INSERT, UPDATE, and DELETE.
-                        <br><br>
-
-                        7. [FOR EACH ROW] − This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected. Otherwise the trigger will execute just once when the SQL statement is executed, which is called a table level trigger.
-                        <br><br>
-                        8. WHEN (condition) − This provides a condition for rows for which the trigger would fire. This clause is valid only for row-level triggers.<br>
-                    </p>
-                    
-                    <br>
-                    
-                    
-                    
-                  </div> 
-
-                
+                      <h5 class="mb-4">Loop Control Statements</h5>
+                      <p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed. Following are the Loop Control Statements : <br><br> 
+                        1. Exit Statement : <br>
+                        The Exit statement completes the loop and control passes to the statement immediately after the END LOOP. <br><br>
+                        2. Continue Statement : <br>
+                        Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating. <br><br>
+                        3. Go to Statement : <br>
+                        Transfers control to the labeled statement. Though it is not advised to use the GOTO statement in your program. 
+                    </p>                   
+                    <br>                   
+                  </div>   
+                  <iframe width="725" height="375" src="https://www.youtube.com/embed/wQWWcqaZqS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>             
                 </div>
-
                 <div class="col-lg-4 mt-5 mt-lg-0">
                     <!-- Author Bio -->
                     <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">

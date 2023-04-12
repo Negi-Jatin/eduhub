@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>EduHub-Online Learning Platform</title>
+    <title>EduHub-Online learning Platform</title>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -92,68 +92,52 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="mb-5">
-                       
                         <h6 class="text-primary mb-3">Apr 11, 2023</h6>
-                        <h1 class="mb-5">PL/SQL : Triggers</h1>
+                        <h1 class="mb-5">  Views: Creating View, Updating View, Deleting View</h1>
                         <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
-                        <h5 class="mb-4">What is a Trigger?</h5>
+                        <h5 class="mb-4">What is a View?</h5>
                         <p> 
-                            Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −
+                            In SQL, a view is a virtual table based on the result-set of an SQL statement.
                             <br>
-                            1. A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)
+                            A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
                             <br>
-                            2. A database definition (DDL) statement (CREATE, ALTER, or DROP).
-                            br
-                            3. A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).<br>
-                            <br>
-                            Syntax for Creating Trigger :
+                            You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
+                            <br><br>
+                           <span> A view is created with the CREATE VIEW statement.</span> <br>
+                            Syntax :
+                            </p>
+                       <div class="syntax">
+                        <p>CREATE VIEW view_name AS <br>
+                            SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE condition; <br>
+                         );
                         </p>
+                       </div>
+                       <br>
+                       <h5 class="mb-4">SQL Updating View</h5>
+                       <p> 
+                        A view can be updated with the CREATE OR REPLACE VIEW statement.
+                           </p>
                       <div class="syntax">
-                        <p>CREATE [OR REPLACE ] TRIGGER trigger_name  <br>
-                            {BEFORE | AFTER | INSTEAD OF }  <br>
-                            {INSERT [OR] | UPDATE [OR] | DELETE} <br>  
-                            [OF col_name]  <br>
-                            ON table_name  <br>
-                            [REFERENCING OLD AS o NEW AS n]  <br>
-                            [FOR EACH ROW]  <br>
-                            WHEN (condition)   <br>
-                            DECLARE <br>
-                               Declaration-statements <br>
-                            BEGIN  <br>
-                               Executable-statements <br>
-                            EXCEPTION <br>
-                               Exception-handling-statements <br>
-                            END; 
-                        </p>
+                       <p>CREATE OR REPLACE VIEW view_name AS <br>
+                        SELECT column1, column2, ... <br>
+                        FROM table_name <br>
+                        WHERE condition;</p>
+                      </div>
+                      <br>
+                    
+                      
+                      <h5 class="mb-4">SQL Dropping View</h5>
+                      <p>A view is deleted with the DROP VIEW statement.</p>
+                      <div class="syntax">
+                        <p>DROP VIEW view_name;</p>
                       </div>
                       <br>
                      
-                     
-                    <p>1. CREATE [OR REPLACE] TRIGGER trigger_name − Creates or replaces an existing trigger with the trigger_name.
-                        <br><br>
-                        2. {BEFORE | AFTER | INSTEAD OF} − This specifies when the trigger will be executed. The INSTEAD OF clause is used for creating trigger on a view. <br>
-                        <br>
-                        3. {INSERT [OR] | UPDATE [OR] | DELETE} − This specifies the DML operation.
-                        <br><br>
-                        4. [OF col_name] − This specifies the column name that will be updated.
-                        <br><br>
-                        5. [ON table_name] − This specifies the name of the table associated with the trigger.
-                        <br><br>
-                        6. [REFERENCING OLD AS o NEW AS n] − This allows you to refer new and old values for various DML statements, such as INSERT, UPDATE, and DELETE.
-                        <br><br>
+                    </div> 
 
-                        7. [FOR EACH ROW] − This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected. Otherwise the trigger will execute just once when the SQL statement is executed, which is called a table level trigger.
-                        <br><br>
-                        8. WHEN (condition) − This provides a condition for rows for which the trigger would fire. This clause is valid only for row-level triggers.<br>
-                    </p>
-                    
-                    <br>
-                    
-                    
-                    
-                  </div> 
-
-                
+                    <iframe width="725" height="375" src="https://www.youtube.com/embed/agI7J5Cjlz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
                 <div class="col-lg-4 mt-5 mt-lg-0">

@@ -51,7 +51,6 @@
            
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                   
                     <div class="collapse navbar-collapse justify-content-around" style="margin-left: 100px;" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="../index.html" class="nav-item nav-link">Home</a>
@@ -92,68 +91,90 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="mb-5">
-                       
                         <h6 class="text-primary mb-3">Apr 11, 2023</h6>
-                        <h1 class="mb-5">PL/SQL : Triggers</h1>
+                        <h1 class="mb-5">MySQL : Special Operators and Treating NULL Values </h1>
                         <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
-                        <h5 class="mb-4">What is a Trigger?</h5>
-                        <p> 
-                            Triggers are stored programs, which are automatically executed or fired when some events occur. Triggers are, in fact, written to be executed in response to any of the following events −
+                        <h5 class="mb-4">SQL And, Or and NOT Operator</h5>
+                        <p>IThe WHERE clause can be combined with AND, OR, and NOT operators.
+                            <br><br>
+                            The AND and OR operators are used to filter records based on more than one condition: <br>
                             <br>
-                            1. A database manipulation (DML) statement (DELETE, INSERT, or UPDATE)
-                            <br>
-                            2. A database definition (DDL) statement (CREATE, ALTER, or DROP).
-                            br
-                            3. A database operation (SERVERERROR, LOGON, LOGOFF, STARTUP, or SHUTDOWN).<br>
-                            <br>
-                            Syntax for Creating Trigger :
-                        </p>
+                            The AND operator displays a record if all the conditions separated by AND are TRUE. <br>
+                            The OR operator displays a record if any of the conditions separated by OR is TRUE. <br>
+                            The NOT operator displays a record if the condition(s) is NOT TRUE. <br>
+                        <div class="syntax">
+                          <p>And Syntax : <br>
+                            SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE condition1 AND condition2 AND condition3 ...; <br><br>
+                            Or Syntax : <br>
+                            SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE condition1 OR condition2 OR condition3 ...; <br><br>
+                            Not Syntax : <br>
+                            SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE NOT condition; <br>
+
+                          </p>
+                        </div>
+                        <br>
+                        <h5 class="mb-4">SQL Like Operator</h5>
+                      <p>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+                        <br>
+                        There are two wildcards often used in conjunction with the LIKE operator:
+                        <br><br>
+
+                        1.  The percent sign (%) represents zero, one, or multiple characters <br>
+                        2.  The underscore sign (_) represents one, single character</p>
                       <div class="syntax">
-                        <p>CREATE [OR REPLACE ] TRIGGER trigger_name  <br>
-                            {BEFORE | AFTER | INSTEAD OF }  <br>
-                            {INSERT [OR] | UPDATE [OR] | DELETE} <br>  
-                            [OF col_name]  <br>
-                            ON table_name  <br>
-                            [REFERENCING OLD AS o NEW AS n]  <br>
-                            [FOR EACH ROW]  <br>
-                            WHEN (condition)   <br>
-                            DECLARE <br>
-                               Declaration-statements <br>
-                            BEGIN  <br>
-                               Executable-statements <br>
-                            EXCEPTION <br>
-                               Exception-handling-statements <br>
-                            END; 
+                        <p>SELECT column1, column2, ... <br>
+                            FROM table_name <br>
+                            WHERE columnN LIKE pattern; 
+                        </p>
+                      </div>
+                      <br>
+                      <h5 class="mb-4">SQL In Operator</h5>
+                      <p>The IN operator allows you to specify multiple values in a WHERE clause.
+                        <br>
+                        The IN operator is a shorthand for multiple OR conditions. <br>Syntax :</p>
+                      <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE column_name IN (value1, value2, ...);
+                        </p>
+                      </div>
+                      <br> <h5 class="mb-4">SQL Between Operator</h5>
+                      <p>The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+                        <br>
+                        The BETWEEN operator is inclusive: begin and end values are included. <br>Syntax :</p>
+                      <div class="syntax">
+                        <p>SELECT column_name(s) <br>
+                            FROM table_name <br>
+                            WHERE column_name BETWEEN value1 AND value2;
+                        </p>
+                      </div>
+                      <br>
+                      <h5 class="mb-4">SQL Is NULL/Is Not NULL Statement</h5>
+                      <p>It is not possible to test for NULL values with comparison operators, such as = or not equal.
+<br>
+                        We will have to use the IS NULL and IS NOT NULL operators instead.</p>
+                      <div class="syntax">
+                        <p>Is NULL : <br> SELECT column_names <br>
+                            FROM table_name <br>
+                            WHERE column_name IS NULL; <br><br>
+                            Is Not NULL : <br>
+                            SELECT column_names <br>
+                            FROM table_name <br>
+                            WHERE column_name IS NOT NULL;
                         </p>
                       </div>
                       <br>
                      
-                     
-                    <p>1. CREATE [OR REPLACE] TRIGGER trigger_name − Creates or replaces an existing trigger with the trigger_name.
-                        <br><br>
-                        2. {BEFORE | AFTER | INSTEAD OF} − This specifies when the trigger will be executed. The INSTEAD OF clause is used for creating trigger on a view. <br>
-                        <br>
-                        3. {INSERT [OR] | UPDATE [OR] | DELETE} − This specifies the DML operation.
-                        <br><br>
-                        4. [OF col_name] − This specifies the column name that will be updated.
-                        <br><br>
-                        5. [ON table_name] − This specifies the name of the table associated with the trigger.
-                        <br><br>
-                        6. [REFERENCING OLD AS o NEW AS n] − This allows you to refer new and old values for various DML statements, such as INSERT, UPDATE, and DELETE.
-                        <br><br>
+                    </div> 
 
-                        7. [FOR EACH ROW] − This specifies a row-level trigger, i.e., the trigger will be executed for each row being affected. Otherwise the trigger will execute just once when the SQL statement is executed, which is called a table level trigger.
-                        <br><br>
-                        8. WHEN (condition) − This provides a condition for rows for which the trigger would fire. This clause is valid only for row-level triggers.<br>
-                    </p>
+                  
                     
-                    <br>
-                    
-                    
-                    
-                  </div> 
-
-                
                 </div>
 
                 <div class="col-lg-4 mt-5 mt-lg-0">
