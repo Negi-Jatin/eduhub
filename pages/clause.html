@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ECOURSES - Online Courses HTML Template</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        span{
+            color: black;
+            font-weight: 600;
+        }
+        .syntax{
+            padding: 15px;
+            background-color: rgb(183, 183, 183);
+            color: black;
+            border-radius: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+    </style>
+   
+</head>
+
+<body>
+   
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5" style="display: flex;justify-content: space-between;">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-2" style="font-size: 38px;"><span class="text-primary" style="font-size: 38px;">Edu</span>Hub</h1>
+                </a>
+            </div>
+           
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                   
+                    <div class="collapse navbar-collapse justify-content-around" style="margin-left: 100px;" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="index.html#about" class="nav-item nav-link">About</a>
+                            <a href="index.html#course" class="nav-item nav-link">Courses</a>
+                          
+                            <a href="index.html#blog" class="nav-item nav-link">Blogs</a>
+                            <a href="index.html#contact" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="index.html#join">Join Now</a>
+                    </div>
+                </nav>
+            </div>     
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">DBMS Course</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">DBMS Course</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="mb-5">
+                        <h6 class="text-primary mb-3">Apr 11, 2023</h6>
+                        <h1 class="mb-5"> Clause : Where, OrderBy, Update, Drop, Truncate</h1>
+                        <!-- <img class="img-fluid rounded w-100 mb-4" src="img/carousel-1.jpg" alt="Image"> -->
+                        <h5 class="mb-4">SQL Where Clause</h5>
+                        <p> 
+                            WHERE keyword is used for fetching filtered data in a result set.
+                            <br><br>
+                            It is used to fetch data according to a particular criteria. <br>
+                            WHERE keyword can also be used to filter data by matching patterns. <br>
+                            Basic Syntax: SELECT column1,column2 FROM table_name WHERE column_name operator value;
+                            </p>
+                       <div class="syntax">
+                        <p>column1 , column2: fields int the table <br>
+                            table_name: name of table <br>
+                            column_name: name of field used for filtering the data <br>
+                            operator: operation to be considered for filtering <br>
+                            value: exact value or pattern to get related data in result 
+                        </p>
+                       </div>
+                       <br>
+                       <h5 class="mb-4">SQL Order By Clause</h5>
+                       <p> 
+                        The ORDER BY statement in SQL is used to sort the fetched data in either ascending or descending according to one or more columns. 
+                        <br>
+                            1. By default ORDER BY sorts the data in ascending order. <br>
+                            2. We can use the keyword DESC to sort the data in descending order and the keyword ASC to sort in ascending order. <br>
+                           </p>
+                      <div class="syntax">
+                       <p>SELECT * FROM table_name ORDER BY column_name ASC|DESC <br>
+                        //Where br
+                        table_name: name of the table. <br>
+                        column_name: name of the column according to which the data is needed to be arranged. <br>
+                        ASC: to sort the data in ascending order. <br>
+                        DESC: to sort the data in descending order. <br>
+                        | : use either ASC or DESC to sort in ascending or descending order//</p>
+                        </div>
+                     
+                      <br>
+                      
+                      <h5 class="mb-4">SQL UPDATE TABLE Statement</h5>
+                      <p>The UPDATE statement is used to modify the existing records in a table.</p>
+                      <div class="syntax">
+                        <p>UPDATE table_name <br>
+                            SET column1 = value1, column2 = value2, ... <br>
+                            WHERE condition;</p>
+                      </div>
+                      <br>
+                      
+                      <h5 class="mb-4">SQL DROP TABLE Statement</h5>
+                      <p>DROP is used to delete a whole database or just a table.
+                        <br>
+                        In this article, we will be learning about the DROP statement which destroys objects like an existing database, <br> table, index, or view. A DROP statement in SQL removes a component from a relational database management system (RDBMS). </p>
+                      <div class="syntax">
+                        <p>DROP object object_name;</p>
+                      </div>
+                      <br>
+                      <h5 class="mb-4">SQL TRUNCATE TABLE Statement</h5>
+                      <p>The major definition between TRUNCATE and DROP is that truncate is used to delete the data inside the table not the whole table.
+                        <br>
+                        TRUNCATE statement is a Data Definition Language (DDL) operation that is used to mark the extent of a table for deallocation (empty for reuse). The result of this operation quickly removes all data from a table, typically bypassing several integrity-enforcing mechanisms. It was officially introduced in the SQL:2008 standard. The TRUNCATE TABLE mytable statement is logically (though not physically) equivalent to the DELETE FROM mytable statement (without a WHERE clause).</p>
+                        <div class="syntax">
+                            <p>TRUNCATE TABLE  table_name;
+                                <br>
+                                table_name: Name of the table to be truncated.
+                                <br>
+                                DATABASE name – student_data</p>
+                        </div>
+                    </div> 
+
+                  
+                    <iframe width="750" height="375" src="https://www.youtube.com/embed/Gqp2beRoeCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <!-- Author Bio -->
+                    <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
+                        <img src="../img/user.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
+                        <h3 class="text-primary mb-3">Jatin Negi</h3>
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
+                        <p class="text-white m-0">Conset elitr erat vero dolor ipsum et diam, eos dolor lorem, ipsum sit
+                            no ut est ipsum erat kasd amet elitr</p>
+                    </div>
+
+                    <!-- Search Form -->
+                    <div class="mb-5">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Keyword">
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-transparent text-primary"><i
+                                            class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Category List -->
+                    <div class="mb-5">
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Topic List</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="../dbms.html" class="text-decoration-none h6 m-0"> MySQL : Types of Commands in SQL</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="ddl.html" class="text-decoration-none h6 m-0"> MySQL : Creating Tables, Inserting Row, Selecting Rows, or Viewing Data of the Table</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="clause.html" class="text-decoration-none h6 m-0">Clause : Where, OrderBy, Update, Drop, Truncate</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="group.html" class="text-decoration-none h6 m-0">Group Function, Operators, Treating NULL Values, Alter Command</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="constraint.html" class="text-decoration-none h6 m-0">Constraints: Column & Table Level, Primary Key, Foreign Key</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="constraint(2).html" class="text-decoration-none h6 m-0">Unique key, Not NULL, Check, Default value </a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="Scalar.html" class="text-decoration-none h6 m-0">Distinct Keyword and Scalar Functions</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="view.html" class="text-decoration-none h6 m-0">Views: Creating Read Only View, Updatable Views, Renaming Column, Destroying Views</a>
+                                <span class="badge badge-primary badge-pill">98</span>
+
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="subquery.html" class="text-decoration-none h6 m-0">Subquery : Single Row, Multiple Row [In,Any,All]</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="pro.html" class="text-decoration-none h6 m-0">PL/Sql : Procedure and Functions</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="cursor.html" class="text-decoration-none h6 m-0">PL/Sql : Cursor Management</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="Exception.html" class="text-decoration-none h6 m-0">PL/Sql : Exception Handling</a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                <a href="triggers.html" class="text-decoration-none h6 m-0">PL/Sql : Triggers</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                   
+
+                    <!-- Tag Cloud -->
+                     <div class="mb-5">
+                        <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">More Courses</h3>
+                        <div class="d-flex flex-wrap m-n1">
+                            <a href="" class="btn btn-outline-primary m-1">Design</a>
+                            <a href="" class="btn btn-outline-primary m-1">Development</a>
+                            <a href="" class="btn btn-outline-primary m-1">Marketing</a>
+                            <a href="" class="btn btn-outline-primary m-1">SEO</a>
+                            <a href="" class="btn btn-outline-primary m-1">Writing</a>
+                            <a href="" class="btn btn-outline-primary m-1">Consulting</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;" id="contact">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>263 Lab, PGGC-11, Chandigarh</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope mr-2"></i>info@EduHub.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Courses</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="dbms.html"><i class="fa fa-angle-right mr-2"></i>DBMS</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
+                <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary px-4">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">EduHub</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">EduHub</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
